@@ -1,5 +1,6 @@
 package nuigalway.app;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -19,8 +20,11 @@ public class AppTest
     }
     
     @Test
-    public void fail()
+    public void getUsername()
     {
-    	assertTrue(false);
+    	Student testStudent = new Student("Bernard", 22, "05/05/1997", 14527643);
+    	testStudent.setUsername();
+    	
+    	assertEquals("Bernard22", testStudent.getUsername());
     }
 }
